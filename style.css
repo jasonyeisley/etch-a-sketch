@@ -17,6 +17,39 @@ body {
     border-right: 5px groove gray;
     width: 300px;
     flex-shrink: 0;
+    padding: 10px;
+}
+
+#slider-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+   
+    
+}
+
+#slider {
+    padding: 0 10px;
+    width: 90%;
+}
+
+#slider-range {
+    display: flex;
+    font-size: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#pixel-setter {
+    width: 100%;
+}
+
+#range-one{
+  margin-left: 10px;
+}
+
+#range-two{
+    justify-self: flex-end;
 }
 
 #main {
@@ -42,7 +75,6 @@ body {
     max-width: 100%;
     aspect-ratio: 1 / 1;
     flex: 1;
-    /* FOR DEBUGGING, CHANGE TO ACTUAL BORDER */
     border: 2px solid orange; 
     /* align-items: stretch; */
 }
@@ -55,6 +87,5 @@ body {
 
 .pixel {
     flex: 1;
-    /* FOR DEBUGGING */
-    border: 1px solid blue;
+    border: .5px solid lightgray;
 }

@@ -1,12 +1,13 @@
-let canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas');
 const slider = document.getElementById('pixel-setter');
+const currentSize = document.getElementById('current-size')
 slider.addEventListener('mousedown', sliderMove)
+slider.addEventListener('mouseup', createCanvas)
 
 function sliderMove(){
     const mouseSlider = slider.addEventListener('mousemove', createCanvas);
     slider.addEventListener('mouseup', () => slider.removeEventListener('mousemove', mouseSlider))
 }
-slider.remov
 
 function createCanvas() {
     canvas.replaceChildren()
@@ -26,4 +27,7 @@ function createCanvas() {
 
         canvas.appendChild(row)
     }
+    currentSize.textContent = `${dimension}x${dimension}`
 }
+
+createCanvas()
