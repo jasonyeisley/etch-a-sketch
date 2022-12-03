@@ -1,6 +1,16 @@
-const canvas = document.getElementById('canvas')
+let canvas = document.getElementById('canvas');
+const slider = document.getElementById('pixel-setter');
+slider.addEventListener('mousedown', sliderMove)
 
-function createCanvas(dimension) {
+function sliderMove(){
+    const mouseSlider = slider.addEventListener('mousemove', createCanvas);
+    slider.addEventListener('mouseup', () => slider.removeEventListener('mousemove', mouseSlider))
+}
+slider.remov
+
+function createCanvas() {
+    canvas.replaceChildren()
+    const dimension = slider.value
 
     // CREATE ROW
     for (let i = 0; i < dimension; i++) {
@@ -17,5 +27,3 @@ function createCanvas(dimension) {
         canvas.appendChild(row)
     }
 }
-
-createCanvas(100)

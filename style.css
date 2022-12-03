@@ -56,8 +56,5 @@ body {
 .pixel {
     flex: 1;
     /* FOR DEBUGGING */
-    border-color: red blue;
-    border-width: 1px;
-    border-style: solid;
-    
+    border: 1px solid blue;
 }
