@@ -1,0 +1,63 @@
+body {
+    background-color:rgb(222, 222, 207);
+    font-family: Stencil Std, fantasy;
+    color: midnightblue;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#container {
+    display: flex;
+    height: 100%;
+}
+
+#sidebar {
+    border-right: 5px groove gray;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+#main {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    flex: 5;
+    gap: 50px;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+
+#title {
+    font-size: xx-large;
+}
+
+#canvas {
+    display: flex;
+    flex-flow: column;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    flex: 1;
+    /* FOR DEBUGGING, CHANGE TO ACTUAL BORDER */
+    border: 2px solid orange; 
+    /* align-items: stretch; */
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    /* align-items: stretch; */
+}
+
+.pixel {
+    flex: 1;
+    /* FOR DEBUGGING */
+    border-color: red blue;
+    border-width: 1px;
+    border-style: solid;
+    
+}
