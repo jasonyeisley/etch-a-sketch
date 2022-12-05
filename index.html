@@ -12,7 +12,7 @@
     <div id="container">
         <div id="sidebar">
             <div id="slider-container">
-                <div id="slider-title">
+                <div class="sidebar-title" id="slider-title">
                     Select a size
                 </div>
                 <div id="slider">
@@ -23,6 +23,17 @@
                     <div id="range-two">100x100</div>
                 </div>
                 <div id="current-size"></div>
+                <div id="mode-container">
+                    <div class="sidebar-title" id="mode-title">
+                        Mode
+                    </div>
+                    <div id="modes">
+                        <ul>
+                            <li class="mode-li"><input type="checkbox" class="mode-checkbox" id="draw-mode" value="draw">Draw</li>
+                            <li class="mode-li"><input type="checkbox" class="mode-checkbox" id="erase-mode" value="erase">Erase</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="main">

@@ -6,6 +6,7 @@ body {
     padding: 0;
     height: 100vh;
     overflow: hidden;
+    caret-color: transparent;
 }
 
 #container {
@@ -24,8 +25,10 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
-   
-    
+}
+
+.sidebar-title {
+    font-size: 24px;
 }
 
 #slider {
@@ -38,6 +41,27 @@ body {
     font-size: 10px;
     width: 100%;
     justify-content: space-between;
+}
+
+#mode-container {
+    align-self: stretch;
+    margin-top: 80px;
+}
+
+#mode-title {
+    text-align: center;
+}
+ul {
+    padding: 0;
+}
+.mode-li {
+    list-style: none;
+    padding: 5px;
+}
+
+.mode-checkbox {
+    margin-right: 20px;
+    transform: scale(1.5);
 }
 
 #pixel-setter {
@@ -88,4 +112,10 @@ body {
 .pixel {
     flex: 1;
     border: .5px solid lightgray;
+}
+
+.black {
+    flex: 1;
+    border: .5px solid lightgray;
+    background-color: black;
 }
