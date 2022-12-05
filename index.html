@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body ondragstart="return false">
     <div id="container">
         <div id="sidebar">
             <div id="slider-container">
@@ -29,7 +29,7 @@
                     </div>
                     <div id="modes">
                         <ul>
-                            <li class="mode-li"><input type="checkbox" class="mode-checkbox" id="draw-mode" value="draw">Draw</li>
+                            <li class="mode-li"><input type="checkbox" class="mode-checkbox" id="draw-mode" value="draw" checked>Draw</li>
                             <li class="mode-li"><input type="checkbox" class="mode-checkbox" id="erase-mode" value="erase">Erase</li>
                         </ul>
                     </div>
