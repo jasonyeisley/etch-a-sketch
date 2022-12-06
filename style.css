@@ -29,6 +29,7 @@ body {
 
 .sidebar-title {
     font-size: 24px;
+    text-align: center;
 }
 
 #slider {
@@ -43,9 +44,19 @@ body {
     justify-content: space-between;
 }
 
+#color-select-container {
+    margin-top: 50px;
+    align-self: stretch;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
 #mode-container {
     align-self: stretch;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 #mode-title {
@@ -114,7 +125,7 @@ ul {
     border: .5px solid lightgray;
 }
 
-.black {
+.color-pixel {
     flex: 1;
     border: .5px solid lightgray;
     background-color: black;

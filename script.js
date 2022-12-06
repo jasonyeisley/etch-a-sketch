@@ -3,9 +3,27 @@ const canvas = document.getElementById('canvas');
 const slider = document.getElementById('pixel-setter');
 const currentSize = document.getElementById('current-size')
 const modeCheckboxes = document.getElementsByClassName('mode-checkbox')
+const colorSelector = document.getElementById('color-select')
 slider.addEventListener('mousedown', sliderMove)
 slider.addEventListener('mouseup', createCanvas)
+colorSelector.addEventListener('change', colorChange)
+let color = '#000000'
 let currentMode = 'draw'
+
+
+// CHANGE THE SIZE OF THE CANVAS WITH THE SLIDER
+function sliderMove(){
+    const mouseSlider = slider.addEventListener('mousemove', (e) => {
+        if (e.buttons == 1) {
+            createCanvas}
+        });
+    slider.addEventListener('mouseup', () => slider.removeEventListener('mousemove', mouseSlider))
+}
+
+// CHANGE THE DRAWING COLOR
+function colorChange(e) {
+    color = e.target.value
+}
 
 // SET THE DRAWING MODE FROM THE CHECKBOXES
 for (let checkbox of modeCheckboxes) {
@@ -21,15 +39,6 @@ function setMode(e) {
     e.target.checked = true // CHECK ONLY THE CURRENT CHECKBOX
     
     currentMode = e.target.value
-}
-
-// CHANGE THE SIZE OF THE CANVAS WITH THE SLIDER
-function sliderMove(){
-    const mouseSlider = slider.addEventListener('mousemove', (e) => {
-        if (e.buttons == 1) {
-            createCanvas}
-        });
-    slider.addEventListener('mouseup', () => slider.removeEventListener('mousemove', mouseSlider))
 }
 
 //CREATE THE NUMBER OF DIVS IN THE CANVAS
@@ -74,12 +83,16 @@ function mode(e) {
     else if (currentMode == 'erase') {
         erase(e)
     }
+    else if (currentMode == 'shade') {
+        shade(e)
+    }
 }
 
 function draw(e) {
     if (e.buttons == 1) {
         e.target.classList = ''
-        e.target.className = 'black'
+        e.target.className = 'color-pixel'
+        e.target.style.backgroundColor = color
     }
 }
 
@@ -88,6 +101,23 @@ function erase(e) {
         e.target.classList = ''
         e.target.className = 'pixel'
     }
+}
+
+function shade(e) {
+    if (e.buttons == 1) {
+        e.target.classList = ''
+        e.target.className = 'color-pixel'
+        e.target.style.backgroundColor = color
+        let opac = e.target.style.opacity
+        if (opac == '') {
+            e.target.style.opacity = .2
+        } else if (opac == 1) {
+            return
+        } else {
+            e.target.style.opacity = opac * 1.2
+        }
+    }
+
 }
 
 createCanvas()
