@@ -100,6 +100,7 @@ function erase(e) {
     if (e.buttons == 1) {
         e.target.classList = ''
         e.target.className = 'pixel'
+        e.target.style.backgroundColor = ''
     }
 }
 
